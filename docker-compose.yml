@@ -5,7 +5,15 @@ services:
       - "8000:80"
     volumes:
       - ./app:/var/www/html
-      - ./apache/000-default.conf:/etc/apache2/sites-available/000-default.conf
+      - ./apache/blog-site.conf:/etc/apache2/sites-enabled/blog-site.conf
     restart: always
-  # blog_db:
-  #   image: ""
+  blog_db:
+    image: "mysql"
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: example_db
+      MYSQL_USER: example_user
+      MYSQL_PASSWORD: example_db_pswd
+      MYSQL_ROOT_PASSWORD: example_root_pswd
