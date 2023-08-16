@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid mt-auto">
     <div class="row">
         <div class="col-md-12 bg-primary text-white text-center">
             <p class="lead pt-3">EveryJTech &copy; 2023</p>
